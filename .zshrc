@@ -1,42 +1,3 @@
-# oh-my-zsh installation path
-export ZSH="$HOME/.oh-my-zsh"
-
-export PATH="/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
-# nvm installation path
-export NVM_DIR="$HOME/.nvm"
-
-# mysql installation path
-export PATH="/usr/local/opt/mysql@5.7/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/mysql@5.7/lib"
-export CPPFLAGS="-I/usr/local/opt/mysql@5.7/include"
-
-# postgres installation path
-export PATH="/Applications/Postgres.app/Contents/Versions/13/bin:$PATH"
-
-# Homebrew's sbin installation path
-export PATH="/usr/local/sbin:$PATH"
-
-# jdk installation path
-export PATH="/usr/local/opt/openjdk@11/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/openjdk@11/lib"
-export CPPFLAGS="-I/usr/local/opt/openjdk@11/include"
-
-# pyenv path
-# export PATH=$(pyenv root)/shims:$PATH
-
-# cmake installation path
-export PATH="/Applications/CMake.app/Contents/bin":"$PATH"
-
-# vscode installation path
-export PATH="/Applications/Visual Studio Code.app/Contents/Resources/app/bin:$PATH"
-
-# poetry installation path
-export PATH="$HOME/.poetry/bin:$PATH"
-
-# R installation path
-export PATH="/Library/Frameworks/R.framework/Resources/bin/:$PATH"
-
 # oh-my-zsh theme
 ZSH_THEME="robbyrussell"
 
@@ -57,19 +18,6 @@ plugins=(
 	poetry
 	minikube
 )
-
-# fzf settings
-export FZF_BASE="$HOME/.fzf"
-export FZF_DEFAULT_COMMAND='rg --no-ignore --files --hidden -g "!{node_modules/*,.git/*}"'
-export FZF_CTRL_T_COMMAND=$FZF_DEFAULT_COMMAND
-export FZF_DEFAULT_OPTS='--height 40% --layout=reverse --border'
-
-# starship settings
-export STARSHIP_CONFIG=~/.starship.toml
-export STARSHIP_CACHE=~/.starship/cache
-
-# kubectl auth plugin
-export USE_GKE_GCLOUD_AUTH_PLUGIN=True
 
 # aliasses
 alias fp="fzf --preview 'bat --style=numbers --color=always --line-range :500 {}'"
@@ -117,9 +65,3 @@ else
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-
-LDFLAGS="-L/usr/local/opt/llvm/lib/c++ -Wl,-rpath,/usr/local/opt/llvm/lib/c++"
-export PATH="/usr/local/opt/llvm/bin:$PATH"
-export LDFLAGS="-L/usr/local/opt/llvm/lib"
-export CPPFLAGS="-I/usr/local/opt/llvm/include"

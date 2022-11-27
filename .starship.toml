@@ -1,0 +1,32 @@
+# Get editor completions based on the config schema
+"$schema" = 'https://starship.rs/config-schema.json'
+
+# Inserts a blank line between shell prompts
+add_newline = false
+
+# Disable the package module, hiding it from the prompt completely
+[package]
+disabled = true
+
+# The kubernetes module Displays the current Kubernetes context name and, if set, the namespace, user and cluster from the kubeconfig file
+[kubernetes]
+disabled = true
+[kubernetes.context_aliases]
+"gke_.*_(?P<var_cluster>[\\w-]+)" = "gke-$var_cluster"
+
+# The gcloud module shows the current configuration for gcloud CLI
+[gcloud]
+disabled = true
+[gcloud.region_aliases]
+europe-west2 = "eu-w2"
+us-west1 = "us-w1"
+us-east1 = "us-e1"
+
+# The cmd_duration module shows how long the last command took to execute
+[cmd_duration]
+min_time = 5000
+
+# The git_commit module shows the current commit hash and also the tag (if any) of the repo in your current directory
+[git_commit]
+disabled = false
+commit_hash_length = 4

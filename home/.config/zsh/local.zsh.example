@@ -1,0 +1,6 @@
+# Machine-local overrides example.
+#
+# Copy this file to ~/.config/zsh/local.zsh for private aliases, secrets,
+# temporary experiments, and machine-specific configuration.
+#
+# This file is intentionally not sourced directly by .zshrc.
